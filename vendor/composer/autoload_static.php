@@ -7,16 +7,32 @@ namespace Composer\Autoload;
 class ComposerStaticInit06aba3fd8aefd95bb92910da2d800e2d
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
         'O' => 
         array (
             'OSS\\' => 4,
         ),
+        'M' => 
+        array (
+            'Monolog\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'OSS\\' => 
         array (
             0 => __DIR__ . '/..' . '/aliyuncs/oss-sdk-php/src/OSS',
+        ),
+        'Monolog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
     );
 

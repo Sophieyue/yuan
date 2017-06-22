@@ -1,5 +1,6 @@
 {
     "require": {
-        "aliyuncs/oss-sdk-php": "^2.2"
+        "aliyuncs/oss-sdk-php": "^2.2",
+        "monolog/monolog": "^1.23"
     }
 }

@@ -1,5 +1,8 @@
 <?php
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+
 class core
 {
     public $params = [];
@@ -74,6 +77,20 @@ class core
     public function run()
     {
         $this->runController();
+    }
+
+    public function logging($errLevel = "DEBUG", $errTitle = "", $errInfo = [])
+    {
+        $log = new Logger("system");
+        //$log->pushHandler(new StreamHandler(ROOT . "/logs/core.log", Logger::WARNING));
+        $log->pushHandler(new StreamHandler(ROOT . "/logs/core.log", Logger::DEBUG));
+
+        if ($errLevel == "DEBUG") {
+            $log->debug($errTitle, $errInfo);
+        } else {
+            $log->debug("暂时只提供debug级别的log, >_<");
+        }
+        //$log->error('Bar');
     }
 }
 
